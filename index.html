@@ -4,8 +4,26 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Random Telegram Account Redirect</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         font-family: Arial, sans-serif;
+         text-align: center;
+         background-color: #f0f0f0;
+         margin: 0;
+      }
+      .message {
+         font-size: 1.2em;
+         color: #333;
+      }
+   </style>
 </head>
 <body>
+   <div class="message">You are being redirected to a random Telegram account...</div>
+
    <script>
       // List of Telegram usernames or links
       const telegramLinks = [
@@ -16,14 +34,25 @@
           "https://t.me/dsinghpx999",
           "https://t.me/abgl999",
           "https://t.me/anaishaxz1",
-          "https://t.me/KING_PHOENIX999",
+          "https://t.me/KING_PHOENIX999"
       ];
 
-      // Get a random index
-      const randomIndex = Math.floor(Math.random() * telegramLinks.length);
+      // Function to handle redirection
+      function redirectToRandomLink() {
+         try {
+            // Get a random index
+            const randomIndex = Math.floor(Math.random() * telegramLinks.length);
 
-      // Redirect to the random Telegram link
-      window.location.href = telegramLinks[randomIndex];
+            // Redirect to the random Telegram link
+            window.location.href = telegramLinks[randomIndex];
+         } catch (error) {
+            console.error("Redirection error:", error);
+            document.querySelector('.message').innerText = "An error occurred while redirecting. Please try again.";
+         }
+      }
+
+      // Delay the redirection to allow the message to be visible
+      setTimeout(redirectToRandomLink, 2000);
    </script>
 </body>
 </html>
