@@ -4,22 +4,6 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Random Telegram Account Redirect</title>
-   <style>
-      body {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         height: 100vh;
-         font-family: Arial, sans-serif;
-         text-align: center;
-         background-color: #f0f0f0;
-         margin: 0;
-      }
-      .message {
-         font-size: 1.2em;
-         color: #333;
-      }
-   </style>
 </head>
 <body>
    <script>
@@ -45,12 +29,11 @@
             window.location.href = telegramLinks[randomIndex];
          } catch (error) {
             console.error("Redirection error:", error);
-            document.querySelector('.message').innerText = "An error occurred while redirecting. Please try again.";
          }
       }
 
-      // Delay the redirection to allow the message to be visible
-      setTimeout(redirectToRandomLink, 2000);
+      // Perform redirection immediately
+      redirectToRandomLink();
    </script>
 </body>
 </html>
