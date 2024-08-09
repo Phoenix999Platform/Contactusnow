@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Random Telegram Account Redirect</title>
 </head>
 <body>
    <script>
@@ -18,17 +19,11 @@
           "https://t.me/KING_PHOENIX999"
       ];
 
-      // Function to handle redirection
-      function redirectToRandomLink() {
-         // Get a random index
-         const randomIndex = Math.floor(Math.random() * telegramLinks.length);
+      // Get a random index
+      const randomIndex = Math.floor(Math.random() * telegramLinks.length);
 
-         // Redirect to the random Telegram link
-         window.location.href = telegramLinks[randomIndex];
-      }
-
-      // Perform redirection immediately
-      redirectToRandomLink();
+      // Redirect to the random Telegram link
+      window.location.href = telegramLinks[randomIndex];
    </script>
 </body>
 </html>
