@@ -20,15 +20,11 @@
 
       // Function to handle redirection
       function redirectToRandomLink() {
-         try {
-            // Get a random index
-            const randomIndex = Math.floor(Math.random() * telegramLinks.length);
+         // Get a random index
+         const randomIndex = Math.floor(Math.random() * telegramLinks.length);
 
-            // Redirect to the random Telegram link
-            window.location.href = telegramLinks[randomIndex];
-         } catch (error) {
-            console.error("Redirection error:", error);
-         }
+         // Redirect to the random Telegram link
+         window.location.href = telegramLinks[randomIndex];
       }
 
       // Perform redirection immediately
